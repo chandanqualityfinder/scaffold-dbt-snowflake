@@ -7,6 +7,11 @@ models:
         data_tests:
           - not_null
           - unique
+      - name: str1
+        data_tests:                  
+          - no_blank_or_stray_str:
+              config:
+               severity: warn   
       - name: num1
         data_tests:
           - not_null
@@ -14,7 +19,7 @@ models:
               arguments:
                 min_value: 0
               config:
-                severity: warn  
+                severity: warn
               
 
   - name: stg_table2
@@ -23,6 +28,11 @@ models:
         data_tests:
           - not_null
           - unique
+      - name: str1
+        data_tests:                  
+          - no_blank_or_stray_str:
+              config:
+               severity: warn   
       - name: date1
         data_tests:
           - not_null
