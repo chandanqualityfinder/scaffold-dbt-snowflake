@@ -13,6 +13,8 @@ models:
               config:
                severity: warn
                store_failures: true
+               database: PYTEST_DB
+               schema: dbt_test__audit
 
       - name: num1
         data_tests:
@@ -23,7 +25,8 @@ models:
               config:
                 severity: warn
                 store_failures: true
-              
+                database: PYTEST_DB
+                schema: dbt_test__audit              
 
   - name: stg_table2
     columns:
@@ -37,6 +40,8 @@ models:
               config:
                severity: warn   
                store_failures: true
+               database: PYTEST_DB
+               schema: dbt_test__audit
 
       - name: date1
         data_tests:
@@ -48,3 +53,5 @@ models:
               config:
                 severity: warn
                 store_failures: true
+                database: PYTEST_DB
+                schema: dbt_test__audit                
