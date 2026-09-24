@@ -11,7 +11,8 @@ models:
         data_tests:
           - not_null
           - dbt_utils.accepted_range:
-              min_value: 0
+              arguments:
+                min_value: 0
 
   - name: stg_table2
     columns:
@@ -23,5 +24,6 @@ models:
         data_tests:
           - not_null
           - dbt_utils.accepted_range:
-              min_value: "'2000-01-01'"
-              max_value: "current_date()"
+              arguments:
+                min_value: "'2000-01-01'"
+                max_value: "current_date()"
