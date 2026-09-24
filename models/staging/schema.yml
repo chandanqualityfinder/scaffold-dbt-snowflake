@@ -11,7 +11,9 @@ models:
         data_tests:                  
           - no_blank_or_stray_str:
               config:
-               severity: warn   
+               severity: warn
+               store_failures: true
+
       - name: num1
         data_tests:
           - not_null
@@ -20,6 +22,7 @@ models:
                 min_value: 0
               config:
                 severity: warn
+                store_failures: true
               
 
   - name: stg_table2
@@ -33,6 +36,8 @@ models:
           - no_blank_or_stray_str:
               config:
                severity: warn   
+               store_failures: true
+
       - name: date1
         data_tests:
           - not_null
@@ -42,3 +47,4 @@ models:
                 max_value: "current_date()"
               config:
                 severity: warn
+                store_failures: true
