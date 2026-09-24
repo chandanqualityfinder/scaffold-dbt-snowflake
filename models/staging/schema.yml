@@ -7,6 +7,11 @@ models:
         data_tests:
           - not_null
           - unique
+      - name: num1
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
 
   - name: stg_table2
     columns:
@@ -14,3 +19,9 @@ models:
         data_tests:
           - not_null
           - unique
+      - name: date1
+        data_tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: "'2000-01-01'"
+              max_value: "current_date()"
