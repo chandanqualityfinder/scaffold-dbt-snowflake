@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: table1_table2
+    columns:
+      - name: pkid
+        data_tests:
+          - not_null
+          - unique
